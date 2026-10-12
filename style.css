@@ -1,0 +1,164 @@
+/* ---------------------------------------------------------------
+   Styling only. You never need to open this file to change content.
+   Edit index.html instead.
+
+   If you do want to adjust the look, the colours below are the
+   only thing worth touching. --accent is the one colour used for
+   links and the highlighted curve.
+   --------------------------------------------------------------- */
+
+:root{
+  --paper:#E9EDEF;
+  --surface:#FDFEFE;
+  --ink:#161D21;
+  --muted:#55656D;
+  --rule:#C4CED3;
+  --accent:#0D6E78;
+  --measure:68ch;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#12181B;
+    --surface:#171E22;
+    --ink:#E4EAED;
+    --muted:#93A3AB;
+    --rule:#2C383E;
+    --accent:#5BC2CB;
+  }
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Serif",Georgia,serif;
+  font-weight:400;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+/* masthead */
+header.top{padding:72px 0 0}
+h1{
+  font-size:clamp(2.4rem,6vw,3.5rem);
+  font-weight:600;
+  line-height:1.04;
+  letter-spacing:-.018em;
+  margin:0 0 .5rem;
+}
+.standfirst{
+  font-size:clamp(1.08rem,2.4vw,1.3rem);
+  font-weight:300;
+  line-height:1.45;
+  color:var(--muted);
+  max-width:38ch;
+  margin:0;
+}
+
+/* hero figure */
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,380px);
+  gap:48px;
+  align-items:center;
+  padding:12px 0 64px;
+}
+figure.diverge{margin:0}
+figure.diverge svg{width:100%;height:auto;display:block}
+figcaption{
+  font-size:.86rem;
+  line-height:1.5;
+  color:var(--muted);
+  margin-top:14px;
+  max-width:42ch;
+}
+.curve{fill:none;stroke:var(--rule);stroke-width:1.4}
+.curve.lead{stroke:var(--accent);stroke-width:2.6}
+.axis{stroke:var(--rule);stroke-width:1;opacity:.75}
+.measured{stroke:var(--ink);stroke-width:1.2;stroke-dasharray:5 4;opacity:.55}
+.measured-label{fill:var(--muted);font-size:11px;font-family:"IBM Plex Serif",serif;font-style:italic}
+.origin{fill:var(--accent)}
+@media (prefers-reduced-motion: no-preference){
+  .curve{stroke-dasharray:460;stroke-dashoffset:460;animation:draw 1.5s cubic-bezier(.3,.7,.3,1) forwards}
+  .curve:nth-of-type(2){animation-delay:.08s}
+  .curve:nth-of-type(3){animation-delay:.16s}
+  .curve:nth-of-type(4){animation-delay:.24s}
+  .curve:nth-of-type(5){animation-delay:.32s}
+  @keyframes draw{to{stroke-dashoffset:0}}
+}
+
+/* sections */
+section{padding:52px 0;border-top:1px solid var(--rule)}
+h2{
+  font-size:1.42rem;
+  font-weight:600;
+  letter-spacing:-.008em;
+  margin:0 0 1.4rem;
+}
+h3{
+  font-size:1.03rem;
+  font-weight:600;
+  margin:2.2rem 0 .8rem;
+}
+h3:first-of-type{margin-top:0}
+.affil{
+  display:block;
+  font-weight:400;
+  font-style:italic;
+  color:var(--muted);
+  font-size:.93rem;
+  margin-top:.15rem;
+}
+p{max-width:var(--measure);margin:0 0 1.15rem}
+p:last-child{margin-bottom:0}
+.pending{color:var(--muted);font-style:italic}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
+a:hover{color:var(--ink)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* publication list */
+.refs{list-style:none;padding:0;margin:0;max-width:var(--measure)}
+.refs li{padding:0 0 1.5rem;margin:0 0 1.5rem;border-bottom:1px solid var(--rule)}
+.refs li:last-child{border-bottom:0;padding-bottom:0;margin-bottom:0}
+.refs .title{font-weight:500}
+.refs .venue{color:var(--muted);font-style:italic}
+.refs .detail{display:block;color:var(--muted);font-size:.93rem;margin-top:.3rem}
+
+/* writing list */
+.pieces{list-style:none;padding:0;margin:0;max-width:var(--measure)}
+.pieces li{
+  padding:.72rem 0 .72rem 1.4rem;
+  border-bottom:1px solid var(--rule);
+  position:relative;
+  color:var(--muted);
+}
+.pieces li:last-child{border-bottom:0}
+.pieces li::before{
+  content:"";
+  position:absolute;
+  left:0;top:1.42rem;
+  width:7px;height:1px;
+  background:var(--accent);
+}
+.pieces li.published{color:var(--ink)}
+
+/* background table */
+dl.facts{margin:0;max-width:var(--measure)}
+dl.facts div{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:.6rem 0;border-bottom:1px solid var(--rule)}
+dl.facts div:last-child{border-bottom:0}
+dt{color:var(--muted);font-size:.93rem}
+dd{margin:0}
+
+footer{padding:52px 0 80px;border-top:1px solid var(--rule);color:var(--muted);font-size:.93rem}
+footer p{max-width:var(--measure)}
+
+@media (max-width:720px){
+  header.top{padding-top:48px}
+  .hero{grid-template-columns:1fr;gap:34px;padding-bottom:44px}
+  dl.facts div{grid-template-columns:1fr;gap:2px}
+  section{padding:40px 0}
+}

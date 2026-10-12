@@ -1,0 +1,220 @@
+<!doctype html>
+<!--
+  ============================================================
+  HOW TO EDIT THIS PAGE
+
+  Everything you need to change is in this file, between the
+  marked sections below. The rules are simple:
+
+    - Change the words BETWEEN the angle brackets, not the
+      brackets themselves.  <p>change this</p>
+    - To add an item to a list, copy an existing <li>...</li>
+      block whole and edit the copy.
+    - To delete something, delete from its opening tag to its
+      matching closing tag.
+    - Anything in [square brackets] is a placeholder you still
+      need to fill in.
+
+  Do not edit style.css unless you want to change colours.
+  ============================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===== EDIT: browser tab title and search-engine description ===== -->
+<title>Maryam Nazem</title>
+<meta name="description" content="Computational biomechanics: subject-specific models of bone and joints, and when their predictions can be trusted.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<!-- ===== EDIT: name and the one-line summary under it ===== -->
+<header class="top">
+  <h1>Maryam Nazem</h1>
+  <p class="standfirst">Computational biomechanics — building subject-specific models of bone and joints, and establishing when their predictions can be trusted.</p>
+</header>
+
+<div class="hero">
+
+  <!-- The figure is decorative. Leave it alone, or edit only the
+       <figcaption> text at the bottom of this block. -->
+  <figure class="diverge">
+    <svg viewBox="0 0 400 240" role="img" aria-label="Several predicted curves spreading apart from a common origin, against a dashed line marking what was measured.">
+      <line class="axis" x1="30" y1="24" x2="30" y2="216"></line>
+      <line class="axis" x1="30" y1="216" x2="382" y2="216"></line>
+      <line class="measured" x1="30" y1="128" x2="382" y2="128"></line>
+      <text class="measured-label" x="382" y="122" text-anchor="end">measured</text>
+      <path class="curve" d="M30 128 C 150 122, 250 102, 376 60"></path>
+      <path class="curve" d="M30 128 C 150 126, 250 118, 376 94"></path>
+      <path class="curve lead" d="M30 128 C 150 129, 250 140, 376 148"></path>
+      <path class="curve" d="M30 128 C 150 131, 250 152, 376 178"></path>
+      <path class="curve" d="M30 128 C 150 133, 250 164, 376 200"></path>
+      <circle class="origin" cx="30" cy="128" r="3.4"></circle>
+    </svg>
+    <!-- ===== EDIT: figure caption ===== -->
+    <figcaption>Models agree where they were built to agree. The useful question is how far they drift once they leave that ground — and whether the thing they drift from was measured well in the first place.</figcaption>
+  </figure>
+
+  <!-- ===== EDIT: the two short paragraphs beside the figure ===== -->
+  <div>
+    <p>I build computer models of bone and joints from medical imaging, and I test how far their predictions can be relied upon for decisions that matter: fracture risk, implant design, and the evidence regulators accept.</p>
+    <p>Simulation is only as good as the judgements behind it, most of which never get written down. My work makes those judgements visible, and checks the answers against what can actually be measured.</p>
+  </div>
+
+</div>
+
+
+<!-- ===================== RESEARCH =====================
+     Each project is an <h3> with a <span class="affil">
+     underneath it, followed by paragraphs. Copy a whole
+     block to add a project. Keep current work first.
+     ==================================================== -->
+<section>
+  <h2>Research</h2>
+
+  <h3>Predicting femoral bone strength after spinal cord injury
+    <span class="affil">PhD research · Biomedical Engineering, NJIT–Rutgers joint program · [advisor and lab]</span>
+  </h3>
+  <p>Spinal cord injury causes rapid bone loss below the level of injury, and the fragility fractures that follow are common, serious, and hard to anticipate. The clinical standard for assessing bone — DXA — struggles in exactly this population, and it measures density rather than strength, which is not the same thing.</p>
+  <p>I am building subject-specific finite element models of the proximal femur from CT imaging across a cohort of roughly fifty bones, predicting mechanical strength directly and comparing those predictions against the clinical measurements taken from the same individuals. The question is whether a model can tell a clinician something the standard scan cannot. Alongside this I collect movement data in the motion capture laboratory, which connects what happens at the whole-body level to the loads a bone actually sees.</p>
+
+  <h3>Benchmarking the credibility of computational knee models
+    <span class="affil">NIH KneeHub consortium · University of Denver</span>
+  </h3>
+  <p>Two competent teams given the same imaging and the same measurements will build models that disagree — not through error, but through the hundreds of small judgements modelling requires. Where to place a boundary in an ambiguous scan. How stiff to make a ligament. How much tension it carries at rest.</p>
+  <p>Within KneeHub I led the benchmarking phase, which asked the question the project existed to answer: can models predict loading conditions they were never calibrated against? Answering it meant first building a framework in which five teams' incompatible outputs could be compared honestly, then quantifying how far their predictions drift once they leave familiar ground. The work bears on how computational evidence is assessed under ASME V&amp;V&nbsp;40, the standard the FDA references for medical device submissions.</p>
+
+</section>
+
+
+<!-- ================= PUBLICATIONS =================
+     One <li>...</li> per item, newest first.
+     .title = the title, .venue = journal name (italic),
+     .detail = the DOI or link line (optional).
+     ================================================ -->
+<section>
+  <h2>Publications and presentations</h2>
+  <ul class="refs">
+
+    <li>
+      <span class="title">Deciphering the “Art” in Modeling and Simulation of the Knee Joint: Model Benchmarking.</span>
+      Nazem M, Andreassen TE, Kim N, Moyle K, Besier TF, Halloran JP, Imhauser CW, Chokhandre S, Schneider MTY, Elmasry S, Zaylor W, Shelburne KB, Erdemir A, Laz PJ.
+      <span class="venue">Journal of Biomechanical Engineering</span>, 2026;148(5):051004.
+      <span class="detail"><a href="https://doi.org/10.1115/1.4070823">DOI 10.1115/1.4070823</a></span>
+    </li>
+
+    <li>
+      <span class="title">Benchmarking predictive performance across independently developed knee models.</span>
+      Podium presentation, International Society of Biomechanics Congress, Stockholm, 2025.
+    </li>
+
+    <li>
+      <span class="title">Sensitivity of predicted joint mechanics to ligament calibration parameters.</span>
+      American Society of Biomechanics Annual Meeting, Pittsburgh, 2025.
+    </li>
+
+    <li>
+      <span class="title">Porous metaphyseal cones in revision total knee arthroplasty.</span>
+      Master's research, University of Tehran. Presented at the 30th Annual Meeting of the Iranian Orthopedic Association.
+    </li>
+
+  </ul>
+</section>
+
+
+<!-- ===== EDIT: replace the placeholder line once the code is released ===== -->
+<section>
+  <h2>Code and data</h2>
+  <p>The benchmarking framework and the Abaqus automation tooling developed for the KneeHub work are being prepared for public release with a citable DOI. Reproducibility is the point of the research; withholding the code would be inconsistent with it.</p>
+  <p class="pending">Repository and archive link to follow.</p>
+</section>
+
+
+<!-- ================= WRITING =================
+     Titles are grey until published. When a piece goes live,
+     add class="published" and wrap the title in a link:
+       <li class="published"><a href="URL">Title</a></li>
+     =========================================== -->
+<section>
+  <h2>Writing</h2>
+  <p>Short pieces explaining this work for people outside the field — clinicians, engineers in adjacent areas, and anyone who wants to know what a simulation can and cannot tell you.</p>
+  <ul class="pieces">
+    <li>Why two models of the same knee produce different results</li>
+    <li>What a bone density scan can and cannot tell you</li>
+    <li>What it actually means to validate a computational model</li>
+    <li>Why reproducibility matters in biomedical simulation</li>
+    <li>Understanding uncertainty in computational medicine</li>
+    <li>How a computer models a human joint</li>
+    <li>Why finite element analysis matters in orthopaedic engineering</li>
+  </ul>
+</section>
+
+
+<!-- ================= BACKGROUND =================
+     Each row is one <div> containing a <dt> label and a <dd>
+     value. Copy a whole <div> block to add a row.
+     ============================================== -->
+<section>
+  <h2>Background</h2>
+  <dl class="facts">
+
+    <div>
+      <dt>Now</dt>
+      <dd>PhD student, Biomedical Engineering, NJIT–Rutgers joint program, since [year]</dd>
+    </div>
+
+    <div>
+      <dt>2024–2025</dt>
+      <dd>Research Assistant, Center for Orthopaedic Biomechanics, University of Denver — NIH KneeHub (R01EB024573)</dd>
+    </div>
+
+    <div>
+      <dt>Education</dt>
+      <dd>MS Mechanical Engineering, University of Denver, 2025 · MS Mechanical Engineering, University of Tehran, 2022 · BS Mechanical Engineering, Isfahan University of Technology, 2018</dd>
+    </div>
+
+    <div>
+      <dt>Industry</dt>
+      <dd>R&amp;D engineer, spinal fusion implants, under ISO and FDA design control</dd>
+    </div>
+
+    <div>
+      <dt>Methods</dt>
+      <dd>CT and MRI segmentation · finite element analysis · probabilistic and sensitivity analysis · model verification and validation · optical motion capture</dd>
+    </div>
+
+    <div>
+      <dt>Tools</dt>
+      <dd>Abaqus · Simpleware ScanIP · HyperMesh · Isight · OpenSim · Vicon · MATLAB · SolidWorks</dd>
+    </div>
+
+    <div>
+      <dt>Member</dt>
+      <dd>American Society of Biomechanics</dd>
+    </div>
+
+  </dl>
+</section>
+
+
+<!-- ===== EDIT: fill in the email and the four links ===== -->
+<footer>
+  <p>
+    <a href="mailto:[email]">[email]</a> ·
+    <a href="#">Curriculum vitae</a> ·
+    <a href="#">Google Scholar</a> ·
+    <a href="#">ORCID</a>
+  </p>
+  <p>Available for peer review in computational biomechanics, orthopaedic modelling, and model verification and validation.</p>
+</footer>
+
+</div>
+</body>
+</html>
